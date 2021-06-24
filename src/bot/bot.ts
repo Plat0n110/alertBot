@@ -10,7 +10,7 @@ export const init = function () {
   const config = getConfig(".casi_bot_rc");
   const bot = new Telegraf(config.bot_section.bot_token);
   bot.start((ctx) =>
-    ctx.reply("Welcome, dear user!", Markup.keyboard([["Btn1"]]).extra())
+    ctx.reply("Welcome, dear user!", Markup.keyboard([["Btn1"]]).resize().extra())
   );
   bot.launch();
 };
