@@ -12,5 +12,6 @@ export const init = function () {
   bot.start((ctx) =>
     ctx.reply("Welcome, dear user!", Markup.keyboard([["Btn1"]]).resize().extra())
   );
+  bot.on('text', (ctx) => ctx.reply('Reply'))
   bot.launch();
-};
+}
